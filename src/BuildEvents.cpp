@@ -420,6 +420,7 @@ struct BuildEventsParser
                     StrEqual(name, "RequireAnalysisPass<llvm::"
                                    "ProfileSummaryAnalysis, llvm::Module>") ||
                     StrEqual(name, "AnnotationRemarksPass") ||
+                    StrEqual(name, "Annotation2MetadataPass") ||
                     StrEqual(name, "EliminateAvailableExternallyPass"))
                   ;
                 else if (StartsWith(name, "Total ", 6)) // ignore "Total XYZ" events
