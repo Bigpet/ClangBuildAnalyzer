@@ -337,6 +337,91 @@ struct BuildEventsParser
                     ;
                 else if (StrEqual(name, "RunLoopPass"))
                     ;
+                else if (
+                    StrEqual(name, "SimplifyCFGPass") ||
+                    StrEqual(name, "PassManager<llvm::Function>") ||
+                    StrEqual(name, "LowerExpectIntrinsicPass") ||
+                    StrEqual(name, "EarlyCSEPass") || StrEqual(name, "SROA") ||
+                    StrEqual(name, "ModuleToFunctionPassAdaptor") ||
+                    StrEqual(name, "IPSCCPPass") ||
+                    StrEqual(name, "CalledValuePropagationPass") ||
+                    StrEqual(name, "GlobalOptPass") ||
+                    StrEqual(name, "DeadArgumentEliminationPass") ||
+                    StrEqual(name, "InstCombinePass") ||
+                    StrEqual(
+                        name,
+                        "RequireAnalysisPass<llvm::GlobalsAA, llvm::Module>") ||
+                    StrEqual(name, "CGSCCToFunctionPassAdaptor") ||
+                    StrEqual(name, "DevirtSCCRepeatedPass") ||
+                    StrEqual(name, "InlinerPass") ||
+                    StrEqual(name, "DSEPass") ||
+                    StrEqual(name, "CoroElidePass") ||
+                    StrEqual(name, "CorrelatedValuePropagationPass") ||
+                    StrEqual(name, "LoopIdiomRecognizePass") ||
+                    StrEqual(
+                        name,
+                        "PassManager<llvm::Loop, llvm::LoopAnalysisManager, "
+                        "llvm::LoopStandardAnalysisResults &, llvm::LPMUpdater "
+                        "&>") ||
+                    StrEqual(name, "FunctionToLoopPassAdaptor") ||
+                    StrEqual(name, "LoopRotatePass") || StrEqual(name, "GVN") ||
+                    StrEqual(name, "SCCPPass") ||
+                    StrEqual(name, "LoopSimplifyPass") ||
+                    StrEqual(name, "PostOrderFunctionAttrsPass") ||
+                    StrEqual(name, "LoopInstSimplifyPass") ||
+                    StrEqual(name, "LoopSimplifyCFGPass") ||
+                    StrEqual(name, "OpenMPOptCGSCCPass") ||
+                    StrEqual(name, "ADCEPass") ||
+                    StrEqual(name, "MemCpyOptPass") ||
+                    StrEqual(name, "IndVarSimplifyPass") ||
+                    StrEqual(name, "LoopDeletionPass") ||
+                    StrEqual(name, "LICMPass") ||
+                    StrEqual(name, "ReassociatePass") ||
+                    StrEqual(name, "CoroEarlyPass") ||
+                    StrEqual(name, "CoroSplitPass") ||
+                    StrEqual(name, "ModuleToPostOrderCGSCCPassAdaptor") ||
+                    StrEqual(name, "ModuleInlinerWrapperPass") ||
+                    StrEqual(name, "BDCEPass") ||
+                    StrEqual(name, "PromotePass") ||
+                    StrEqual(name, "LoopUnrollPass") ||
+                    StrEqual(name, "AlignmentFromAssumptionsPass") ||
+                    StrEqual(name, "CGProfilePass") ||
+                    StrEqual(name, "InferFunctionAttrsPass") ||
+                    StrEqual(name, "JumpThreadingPass") ||
+                    StrEqual(name, "LoopFullUnrollPass") ||
+                    StrEqual(name, "InvalidateAnalysisPass<llvm::AAManager>") ||
+                    StrEqual(name, "LibCallsShrinkWrapPass") ||
+                    StrEqual(name, "SLPVectorizerPass") ||
+                    StrEqual(name, "TailCallElimPass") ||
+                    StrEqual(name, "SpeculativeExecutionPass") ||
+                    StrEqual(name, "LCSSAPass") ||
+                    StrEqual(name, "SimpleLoopUnswitchPass") ||
+                    StrEqual(name, "LoopVectorizePass") ||
+                    StrEqual(name, "LowerConstantIntrinsicsPass") ||
+                    StrEqual(name, "GlobalDCEPass") ||
+                    StrEqual(name, "ReversePostOrderFunctionAttrsPass") ||
+                    StrEqual(name, "VectorCombinePass") ||
+                    StrEqual(name, "InstSimplifyPass") ||
+                    StrEqual(name, "MergedLoadStoreMotionPass") ||
+                    StrEqual(name, "DivRemPairsPass") ||
+                    StrEqual(name, "Float2IntPass") ||
+                    StrEqual(name, "LoopSinkPass") ||
+                    StrEqual(name, "LoopDistributePass") ||
+                    StrEqual(name, "ConstantMergePass") ||
+                    StrEqual(name, "RelLookupTableConverterPass") ||
+                    StrEqual(name, "LoopLoadEliminationPass") ||
+                    StrEqual(name, "CoroCleanupPass") ||
+                    StrEqual(
+                        name,
+                        "RequireAnalysisPass<llvm::"
+                        "OptimizationRemarkEmitterAnalysis, llvm::Function>") ||
+                    StrEqual(name, "WarnMissedTransformationsPass") ||
+                    StrEqual(name, "InjectTLIMappings") ||
+                    StrEqual(name, "RequireAnalysisPass<llvm::"
+                                   "ProfileSummaryAnalysis, llvm::Module>") ||
+                    StrEqual(name, "AnnotationRemarksPass") ||
+                    StrEqual(name, "EliminateAvailableExternallyPass"))
+                  ;
                 else if (StartsWith(name, "Total ", 6)) // ignore "Total XYZ" events
                     ;
                 else
